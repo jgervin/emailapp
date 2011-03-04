@@ -13,5 +13,6 @@
 
   <div class="field">
     <%= f.label :email %> <%= f.text_field :email %> <%= f.submit "Join" %>
+    <%= f.hidden_field :parent_id unless @member.parent_id.nil? %>
   </div>
 <% end %>

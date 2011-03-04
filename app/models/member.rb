@@ -6,14 +6,14 @@ class Member < ActiveRecord::Base
             :presence => true,
             :format => { :with => /^([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})$/i }  
 
-  after_create :generate_permalink
+  before_create :generate_permalink
 
   def title
-    "Just signed up at Eviral"
+    "Just signed up at SmackDab.com!"
   end
 
   def link
-    "http://eviral.com/members/#{permalink}"
+    "http://smackdab.com/t/#{permalink}"
   end
 
   def facebook_link
@@ -27,6 +27,7 @@ class Member < ActiveRecord::Base
   private
 
   def generate_permalink
-    self[:permalink] = "testing"
+    o =  [('a'..'z'),('A'..'Z'),('0'..'9')].map{|i| i.to_a}.flatten;  
+    self[:permalink] = (0..10).map{ o[rand(o.length)]  }.join;
   end
 end

@@ -1,6 +1,11 @@
-<p id="notice"><%= notice %></p>
+<h1>Thanks!</h1>
 
-Thank you!
+<div style="float:left; width:45%; text-align:center;">
+<%= link_to "#{image_tag('twitter_128.png')}Tweet This!".html_safe, @member.twitter_link %>
+</div>
 
-<%= link_to "Share on Twitter", @member.twitter_link %>
-<%= link_to "Share on Facebook", @member.facebook_link %>
+<div style="float:left; width:10%;"><br/><br/><br/>or</div>
+
+<div style="float:left; width:45%; text-align:center;">
+<%= link_to "#{image_tag('facebook_128.png')}Share on Facebook".html_safe, @member.facebook_link %>
+</div>
