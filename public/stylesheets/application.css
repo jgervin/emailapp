@@ -1,0 +1,57 @@
+body {
+  background-image:url('/images/Sixth_Street_Austin.jpg');
+  font-family:arial, helvetica
+}
+
+a:link, a:visited {
+  color:#ddd;
+  text-decoration:none;
+}
+
+a:active, a:hover {
+  color:white;
+  font-weight:bold;
+}
+
+
+.box {
+  width:300px;
+  height:200px;
+
+  border: solid 10px black;
+  color: white;
+ 
+  /* the border will curve into a 'D' */
+  
+  -webkit-border-radius: 0 50px 50px 0;
+     -moz-border-radius: 0 50px 50px 0;
+          border-radius: 0 50px 50px 0;
+  
+  background-color:black;
+  -webkit-opacity:0.5;
+     -moz-opacity:0.5;
+          opacity:0.5;
+
+  padding:1em;    
+
+  margin:auto;
+  margin-top:8em;
+
+  vertical-align:middle;
+}
+
+.box h1 {
+  padding-bottom:0px;
+  margin-bottom:0px;
+}
+
+.slogan {
+  margin-top: 5px;
+  float:right;
+}
+
+.leader {
+  clear:both;
+  padding-top:2em;
+  padding-bottom:1em;
+}
